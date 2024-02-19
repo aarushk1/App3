@@ -38,22 +38,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
     var allergy_count = 0;
     var cold_count = 0;
+	<!--the allergy_count variable will be used to track for the response and will be added to with every response that aligns with the allergy symptoms; it will initially be set at 0-->
+	<!--the cold_count variable will be used to track for the response and will be added to with every response that aligns with the cold symptoms; it will initially be set at 0-->
+
+		
+<!--the allergyAdd function is used to add to the variable allergy_count everytime an allergy symptom is the response from the questions prompted-->
 
     function allergyAdd() {
         allergy_count = allergy_count + 1;
         alert(allergy_count);
     }
 
+<!--the coldAdd function is sued to add to the cold allergy_count everytime a cold symptom is the response from the questions prompted-->
     function coldAdd() {
         cold_count = cold_count + 1;
         alert(cold_count);
+	    <!--this line is used to allow for the screen to display for the amount of cold symptoms that are reported by the user-->
     }
 
     function Results() {
-        var AP = Math.round((allergy_count / 6) * 100);
-        var CP = Math.round((cold_count / 6) * 100);
+        var AP = Math.round((allergy_count / 6) * 100); <!--expresses the allergy percent-->
+        var CP = Math.round((cold_count / 6) * 100); <!--expresses the cold percent-->
         var resultText = document.getElementById("results");
-        resultText.innerHTML = "Probability it is allergies =" + AP + "%" + "<br> Probability it is a cold =" + CP + "%";
+        resultText.innerHTML = "Probability it is allergies =" + AP + "%" + "<br> Probability it is a cold =" + CP + "%";  <!--line that expresses both percents-->
     }
 </script>
 
