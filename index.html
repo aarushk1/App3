@@ -175,7 +175,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>"Probability it is allergies =" + Math.round(allergyAdd/6) + "<br> Probability it is a cold =" + Math.round(coldAdd/6); </p>    
+        var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
     	</div>
 </div>
 
