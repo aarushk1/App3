@@ -56,6 +56,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--this line is used to allow for the screen to display for the amount of cold symptoms that are reported by the user-->
         }
 
+	function Results(){
+		var AP = Math.round((allergy_count/6) * 100);
+		var CP = Math.round((cold_count/6) * 100);
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + AP + "%" + "<br> Probability it is a cold =" + CP + "%"; 
+
   </script>
 
 
@@ -109,74 +115,74 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!--indicates what the page two components will look like-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question2?</h1>
+		<h1>Question2?</h1> <!--the identifier at the top of the page that will indicate which question this will be-->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have a fever?</p> <!--This is question 2-->
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--this is if the answer is yes, the count for allergyAdd function will go up as the user intidcates an allergy symptom and the page goes to the third question-->
+         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!--this is if the answer is no, the count for coldAdd function will go up as the user intidcates a cold symptom and the page goes to the third question-->
 	</div>
 </div>	
 
-<div class="page" id="three">
+<div class="page" id="three"> <!--indicates the creation of the third page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question3</h1>
+		<h1>Question3</h1> <!--identifier at the top of the page that indicates it is question 3-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a sore throat?.</p>   
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Do you have a sore throat?.</p>   <!--This is question 3-->
+	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!--this is if the answer is yes, the count for allergyAdd function will go up as the user intidcates an allergy symptom and the page goes to the fourth question-->
+         <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!--this is if the answer is no, the count for coldAdd function will go up as the user intidcates a cold symptom and the page goes to the fourth question-->
     	</div>
 </div>
 
-<div class="page" id="four">
+<div class="page" id="four"> <!--indicates that it is the creation of the fourth page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question4</h1>
+		<h1>Question4</h1> <!--question 4 identiifer at the top of the screen-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your symptoms seasonal or chronic?</p>    
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are your symptoms seasonal or chronic?</p>  <!--question 4-->
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!--this is if the answer is yes, the count for allergyAdd function will go up as the user intidcates an allergy symptom and the page goes to the fifth question-->
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!--this is if the answer is no, the count for coldAdd function will go up as the user intidcates a cold symptom and the page goes to the fifth question-->
     	</div>
 </div>
 
-<div class="page" id="five">
+<div class="page" id="five">  <!--indicates that it is the creation of the fifth page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question5</h1>
+		<h1>Question5</h1> <!--question 5 identiifer at the top of the screen-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are there any allergens that are present in the air?</p>    
-	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are there any allergens that are present in the air?</p>     <!--question 5-->
+	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!--this is if the answer is yes, the count for allergyAdd function will go up as the user intidcates an allergy symptom and the page goes to the sixth question-->
+        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!--this is if the answer is no, the count for coldAdd function will go up as the user intidcates a cold symptom and the page goes to the sixth question-->
     	</div>
 </div>
 
-<div class="page" id="six">
+<div class="page" id="six"> <!--indicates that it is the creation of the sixth page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question6</h1>
+		<h1>Question6</h1> <!--question 6 identiifer at the top of the screen-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are you suffering from body aches?</p>    
-	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are you suffering from body aches?</p>    <!--question 6-->
+	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!--this is if the answer is yes, the count for allergyAdd function will go up as the user intidcates an allergy symptom and the page goes to the results page-->
+        <a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!--this is if the answer is no, the count for coldAdd function will go up as the user intidcates a cold symptom and the page goes to the results page-->
     	</div>
 </div>
 
-<div class="page" id="seven">
+<div class="page" id="seven"> <!--indicates that it is the creation of the seventh page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		<h1>Results</h1>  <!--results identiifer at the top of the screen-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		<p id = "results" ><</p>
+		<a href = "#seven" onclick="Results()"  class="w3-btn w3-black" <!--here is where you view the generated results-->
     	</div>
 </div>
 
