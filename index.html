@@ -97,15 +97,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!--this part of the code is used to indicate a new page, and what that page identifier is, it should be the opening line to every piece of code regarding one page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1> <!--this identifies that it is going to display question1 at the top of the first question page-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?.</p>  
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are your eyes watery or itchy?.</p>  <!--the question-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--calls back function allergyAdd to indicate that it is an allergy symptom when the button yes is pressed, while also moving the page to the next question-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--calls back function coldAdd to indicate that it is a cold symptom when the button no is pressed, while also moving the page to the next question-->
     	</div>
 </div>
 
@@ -169,6 +169,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 </div>
 
+<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </p>    
+    	</div>
+</div>
 
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
